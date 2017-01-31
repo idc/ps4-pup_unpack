@@ -56,6 +56,7 @@ namespace pup_unpack
                 { 11, "preinst_fs_image.bin" },
                 { 12, "system_ex_fs_image.bin" },
                 { 257, "eula.xml" },
+                { 514, "orbis_swu.self" },
             };
 
             var deviceNames = new Dictionary<uint, string>()
