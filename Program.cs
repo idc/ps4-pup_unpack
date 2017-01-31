@@ -135,10 +135,13 @@ namespace pup_unpack
                         int tableIndex = -1;
                         for (int j = 0; j < entryCount; j++)
                         {
-                            if (entries[j].Id == i)
+                            if ((entries[j].Flags & 1) != 0)
                             {
-                                tableIndex = j;
-                                break;
+                                if (entries[j].Id == i)
+                                {
+                                    tableIndex = j;
+                                    break;
+                                }
                             }
                         }
 
@@ -250,10 +253,13 @@ namespace pup_unpack
                 int tableIndex = -1;
                 for (int j = 0; j < entries.Length; j++)
                 {
-                    if (entries[j].Id == index)
+                    if ((entries[j].Flags & 1) != 0)
                     {
-                        tableIndex = j;
-                        break;
+                        if (entries[j].Id == index)
+                        {
+                            tableIndex = j;
+                            break;
+                        }
                     }
                 }
 
