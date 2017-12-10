@@ -16,9 +16,11 @@ namespace pup_unpack
         public static void Main(string[] args)
         {
             bool showHelp = false;
+            bool saveTables = false;
 
             var options = new OptionSet()
             {
+                { "save-tables", "save tables", v => saveTables = v != null },
                 { "h|help", "show this message and exit", v => showHelp = v != null },
             };
 
@@ -192,6 +194,10 @@ namespace pup_unpack
                     }
                     else
                     {
+                        if (saveTables == false)
+                        {
+                            continue;
+                        }
                         name = string.Format("{0} for {1}.bin", entry.Id, entries[tableEntries[i]].Id);
                         name = Path.Combine("tables", name);
                     }
