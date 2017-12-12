@@ -83,6 +83,7 @@ namespace pup_unpack
                 { 43, "/dev/sflash0s0x33" },
                 { 3, "/dev/sflash0s0x38" },
                 { 34, "/dev/sflash0s0x38" },
+                { 48, "/dev/sflash0s0x38" },
                 { 4, "/dev/sflash0s1.cryptx2b" },
                 { 35, "/dev/sflash0s1.cryptx2b" },
                 { 38, "/dev/sflash0s1.cryptx2b" },
